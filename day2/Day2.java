@@ -17,7 +17,7 @@ public class Day2 {
     public static void main(String[] args) {
         Day2Part1 day2Part1 = new Day2Part1();
         Day2Part2 day2Part2 = new Day2Part2();
-        List<String> lines = Helper.INSTANCE.readLinesFromFile("./day2/day2_input.txt");
+        List<String> lines = Helper.INSTANCE.readLinesFromFile("./day2/input.txt");
 
         log.info("Part1: %d".formatted(day2Part1.solve(lines)));
         log.info("Part2: %d".formatted(day2Part2.solve(lines)));
