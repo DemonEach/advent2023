@@ -1,4 +1,4 @@
-package helper;
+package ru.demoneach.helper;
 
 import java.util.List;
 

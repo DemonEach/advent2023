@@ -1,4 +1,4 @@
-package day1;
+package ru.demoneach.day1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import helper.IDayPartSolution;
+import ru.demoneach.helper.IDayPartSolution;
 
 public class Day1Part2 implements IDayPartSolution {
 

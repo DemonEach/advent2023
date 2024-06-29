@@ -1,11 +1,11 @@
-package day2;
+package ru.demoneach.day2;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-import helper.IDayPartSolution;
+import ru.demoneach.helper.IDayPartSolution;
 
 public class Day2Part2 implements IDayPartSolution {
 
@@ -17,8 +17,8 @@ public class Day2Part2 implements IDayPartSolution {
             int tmp = 1;
             HashMap<String, Integer> colors = new HashMap<>();
 
-            List<String> items = List.of(line.split(":")[1].split("(,|;)")).stream().map(String::trim)
-                    .collect(Collectors.toList());
+            List<String> items = Stream.of(line.split(":")[1].split("([,;])")).map(String::trim)
+                    .toList();
 
             for (String item : items) {
                 String[] itemParts = item.split(" ");

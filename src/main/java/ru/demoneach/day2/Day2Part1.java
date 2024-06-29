@@ -1,10 +1,11 @@
-package day2;
+package ru.demoneach.day2;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
-import helper.IDayPartSolution;
+import ru.demoneach.helper.IDayPartSolution;
 
 public class Day2Part1 implements IDayPartSolution {
     private static Map<String, Integer> colors = Map.of(
@@ -14,7 +15,7 @@ public class Day2Part1 implements IDayPartSolution {
 
     private boolean isItemValid(String item) {
         String[] itemParts = item.split(" ");
-        return Integer.valueOf(itemParts[0]) <= colors.get(itemParts[1]);
+        return Integer.parseInt(itemParts[0]) <= colors.get(itemParts[1]);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class Day2Part1 implements IDayPartSolution {
             String[] gameInfo = line.split(":");
 
             int gameId = Integer.parseInt(gameInfo[0].split(" ")[1]);
-            Boolean isValid = List.of(gameInfo[1].split(";")).stream().map(item -> item.split(", "))
+            Boolean isValid = Stream.of(gameInfo[1].split(";")).map(item -> item.split(", "))
                     .flatMap(Arrays::stream)
                     .map(String::trim)
                     .allMatch(this::isItemValid);
